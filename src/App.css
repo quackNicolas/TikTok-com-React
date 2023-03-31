@@ -15,7 +15,7 @@ html {
   width: 80%;
   max-width: 500px;
   border: 1px solid rgb(36, 36, 36);
-  border-radius: 20px;
+  border-radius: 25px;
   overflow: scroll;
   scroll-snap-type: y mandatory;
   position: relative;
