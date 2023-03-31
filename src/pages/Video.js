@@ -1,17 +1,35 @@
-import React from 'react'
-import "./video.css"
+import React, { useRef, useState } from "react";
+import VideoFooter from "./components/footer/VideoFooter";
+import "./video.css";
 
 function Video() {
-  return (
-    <div className='video'>
-        <video 
-          className='video__player'
-          src = "https://www.tiktok.com/63ad6f3c-1a49-4bc4-90cc-b73d3ff4978d"
-        >
+  const videoRef = useRef(null);
+  const [play, setPlay] = useState(false);
 
-        </video>
+  function handdleStart() {
+    if(play) {
+      videoRef.current.pause()
+      setPlay(false)
+    } else {
+      videoRef.current.play();
+      setPlay(true)
+    }
+  }
+
+  return (
+    <div className="video">
+      <video
+        className="video__player"
+        ref={videoRef}
+        onClick={handdleStart}
+        loop
+        src="https://v4.cdnpk.net/videvo_files/video/free/2019-01/large_watermarked/190111_04_TaksinBridge_Drone_02_preview.mp4"
+      >
+
+      </video>
+      <VideoFooter />
     </div>
-  )
+  );
 }
 
-export default Video
+export default Video;
