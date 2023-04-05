@@ -5,4 +5,4 @@
  -React <br>
  -FireBase <br>
  
- <a target=blank href="https://tiktok---jornada-6860d.web.app">Link do projeto!</a>
+ <a target="_blank" href="https://tiktok---jornada-6860d.web.app">Link do projeto!</a>
